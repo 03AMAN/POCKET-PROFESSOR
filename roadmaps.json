@@ -1,0 +1,107 @@
+{
+    "Web Development": {
+      "Beginner": [
+        { "name": "HTML", "resource": "https://youtu.be/kUMe1FH4CHE" },
+        { "name": "CSS", "resource": "https://youtu.be/1Rs2ND1ryYc" },
+        { "name": "JavaScript", "resource": "https://youtu.be/PkZNo7MFNFg" },
+        { "name": "Responsive Design", "resource": "https://youtu.be/Sg-PauuC53w" },
+        { "name": "Web Accessibility", "resource": "https://youtu.be/W5nUybYHjL4" },
+        { "name": "CSS Flexbox", "resource": "https://youtu.be/fYq5PXgSsbE" }
+      ],
+      "Intermediate": [
+        { "name": "React", "resource": "https://youtu.be/bMknfKXIFA8" },
+        { "name": "Node.js", "resource": "https://youtu.be/TlB_eWDSMt4" },
+        { "name": "Git", "resource": "https://youtu.be/USjZcfj8yxE" },
+        { "name": "SASS", "resource": "https://youtu.be/1AqRrPyfRrQ" },
+        { "name": "REST APIs", "resource": "https://youtu.be/7YcW25PHnAA" },
+        { "name": "ES6", "resource": "https://youtu.be/NCwa_xi0Uuc" }
+      ],
+      "Advanced": [
+        { "name": "TypeScript", "resource": "https://youtu.be/gieEQFIfgYc" },
+        { "name": "Docker", "resource": "https://youtu.be/9zUHg7xjIqQ" },
+        { "name": "AWS", "resource": "https://youtu.be/sOPzXKOWm0A" },
+        { "name": "GraphQL", "resource": "https://youtu.be/hzqlrT4EExY" },
+        { "name": "Serverless Architecture", "resource": "https://youtu.be/3p0v6bi8mV0" },
+        { "name": "Microservices", "resource": "https://youtu.be/K6bJdrt81JU" }
+      ]
+    },
+    "Data Science": {
+      "Beginner": [
+        { "name": "Python", "resource": "https://youtu.be/rfscVS0vtbw" },
+        { "name": "Pandas", "resource": "https://youtu.be/vmEHCJofslg" },
+        { "name": "NumPy", "resource": "https://youtu.be/QUT1VHiLmmI" },
+        { "name": "Data Visualization", "resource": "https://youtu.be/gHgKN-87t5g" },
+        { "name": "Jupyter Notebooks", "resource": "https://youtu.be/2eChfTRDdUw" },
+        { "name": "Matplotlib", "resource": "https://youtu.be/3Xc3CA655Y4" }
+      ],
+      "Intermediate": [
+        { "name": "Matplotlib", "resource": "https://youtu.be/3Xc3CA655Y4" },
+        { "name": "Scikit-Learn", "resource": "https://youtu.be/0Lt9w-BxKFQ" },
+        { "name": "SQL", "resource": "https://youtu.be/HXV3zeQKqGY" },
+        { "name": "Seaborn", "resource": "https://youtu.be/xx3c14sJwa4" },
+        { "name": "PCA (Principal Component Analysis)", "resource": "https://youtu.be/pPbe-zc3t9I" },
+        { "name": "K-means Clustering", "resource": "https://youtu.be/4b5iB1z0OEk" }
+      ],
+      "Advanced": [
+        { "name": "TensorFlow", "resource": "https://youtu.be/tPYj3fFJGjk" },
+        { "name": "PySpark", "resource": "https://youtu.be/_C8kWso4ne4" },
+        { "name": "MLOps", "resource": "https://youtu.be/9BgIDqAzfuA" },
+        { "name": "Deep Learning", "resource": "https://youtu.be/aircAruvnKk" },
+        { "name": "Reinforcement Learning", "resource": "https://youtu.be/2pWv7GOvuf0" },
+        { "name": "NLP (Natural Language Processing)", "resource": "https://youtu.be/lEwFYjxVbdA" }
+      ]
+    },
+    "Cybersecurity": {
+      "Beginner": [
+        { "name": "Linux Basics", "resource": "https://youtu.be/ROjZy1WbCIA" },
+        { "name": "Networking", "resource": "https://youtu.be/qiQR5rTSshw" },
+        { "name": "Python for Security", "resource": "https://youtu.be/3Kq1MIfTWCE" },
+        { "name": "Ethical Hacking Basics", "resource": "https://youtu.be/gkFYqJzAsfQ" },
+        { "name": "Firewalls", "resource": "https://youtu.be/dOlRjq7YzKk" },
+        { "name": "Cryptography Basics", "resource": "https://youtu.be/SfyoEKtlm9E" }
+      ],
+      "Intermediate": [
+        { "name": "Ethical Hacking", "resource": "https://youtu.be/fNzpcB7ODxQ" },
+        { "name": "Wireshark", "resource": "https://youtu.be/TkCSr30UojM" },
+        { "name": "OWASP Top 10", "resource": "https://youtu.be/1S0aBV-Waeo" },
+        { "name": "Metasploit", "resource": "https://youtu.be/jF5dMjD3cfw" },
+        { "name": "Network Penetration Testing", "resource": "https://youtu.be/nLB-_8xw8h0" },
+        { "name": "Web Application Security", "resource": "https://youtu.be/3NmHsPy1Ccs" }
+      ],
+      "Advanced": [
+        { "name": "Reverse Engineering", "resource": "https://youtu.be/VroEiMOJPm8" },
+        { "name": "Penetration Testing", "resource": "https://youtu.be/3Kq1MIfTWCE" },
+        { "name": "Threat Intelligence", "resource": "https://youtu.be/4kF4MRQYMJ8" },
+        { "name": "Advanced Cryptography", "resource": "https://youtu.be/5F8FErzU-o0" },
+        { "name": "Zero Trust Architecture", "resource": "https://youtu.be/dDq5o4KrFJw" },
+        { "name": "Security Operations Centers (SOC)", "resource": "https://youtu.be/OVc4AvhlA6Q" }
+      ]
+    },
+    "Mobile Development": {
+      "Beginner": [
+        { "name": "Flutter", "resource": "https://youtu.be/1ukSR1GRtMU" },
+        { "name": "Kotlin (Android)", "resource": "https://youtu.be/F9UC9DY-vIU" },
+        { "name": "Swift (iOS)", "resource": "https://youtu.be/8Xg7E9shq0U" },
+        { "name": "Xcode (iOS)", "resource": "https://youtu.be/D6cQmK_g-nE" },
+        { "name": "Dart Programming", "resource": "https://youtu.be/EXpGv8c5_7w" },
+        { "name": "Android Studio", "resource": "https://youtu.be/qE_2F0gGPlM" }
+      ],
+      "Intermediate": [
+        { "name": "Firebase", "resource": "https://youtu.be/9kRgVxULbag" },
+        { "name": "REST APIs", "resource": "https://youtu.be/-MTSQjw5DrM" },
+        { "name": "State Management", "resource": "https://youtu.be/1ukSR1GRtMU" },
+        { "name": "Push Notifications", "resource": "https://youtu.be/K6BrbCgeDh0" },
+        { "name": "Geolocation", "resource": "https://youtu.be/S2v01mfx1Ms" },
+        { "name": "Unit Testing", "resource": "https://youtu.be/kf9ioRrbbLo" }
+      ],
+      "Advanced": [
+        { "name": "App Store Optimization", "resource": "https://youtu.be/7UIBIaEZVWw" },
+        { "name": "CI/CD for Mobile", "resource": "https://youtu.be/5E9Gg6u2p7I" },
+        { "name": "Bluetooth Low Energy (BLE)", "resource": "https://youtu.be/W9VuU0ZP1po" },
+        { "name": "Deep Linking", "resource": "https://youtu.be/jtxI89gGZXs" },
+        { "name": "Multi-Platform Development", "resource": "https://youtu.be/riPOIiM4ATQ" },
+        { "name": "AR/VR in Mobile Apps", "resource": "https://youtu.be/zxD6VnM7XtM" }
+      ]
+    }
+  }
+  

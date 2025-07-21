@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resume Builder</title>
+    <script>
+        function updatePreview() {
+            const fields = [
+                'name',
+                'email',
+                'phone',
+                'skills',
+                'experience',
+                'education',
+                'certifications',
+                'projects',
+                'achievements'  // corrected from 'achivements'
+            ];
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                const preview = document.getElementById(field + '_preview');
+                if (input && preview) {
+                    preview.innerText = input.value;
+                }
+            });
+        }
+    </script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Build Your Resume</h2>
+        <p style="text-align:center;">
+            <strong>
+            Build Your Resume is a feature that helps users quickly create a professional resume by filling out a simple form. Users enter details like name, contact info, skills, education, experience, and projects. The resume is automatically generated in a clean format. It also offers a live preview and options to download as PDF or Word.
+            </strong>
+        </p>
+        <form method="POST" action="/srb/preview">
+
+
+            <label>Name: <input type="text" id="name" name="name" oninput="updatePreview()" required></label><br>
+            <label>Email: <input type="email" id="email" name="email" oninput="updatePreview()" required></label><br>
+            <label>Phone: <input type="text" id="phone" name="phone" oninput="updatePreview()" required></label><br>
+            <label>Skills: <textarea id="skills" name="skills" oninput="updatePreview()" required></textarea></label><br>
+            <label>Experience: <textarea id="experience" name="experience" oninput="updatePreview()" required></textarea></label><br>
+            <label>Education: <textarea id="education" name="education" oninput="updatePreview()" required></textarea></label><br>
+            <label>Certifications: <textarea id="certifications" name="certifications" oninput="updatePreview()" required></textarea></label><br>
+            <label>Projects: <textarea id="projects" name="projects" oninput="updatePreview()" required></textarea></label><br>
+            <label>Achievements: <textarea id="achievements" name="achievements" oninput="updatePreview()" required></textarea></label><br>
+
+            <label>Choose Template:
+                <select id="templateSelect" name="template" onchange="syncTemplateSelection()" required>
+                    <option value="template1.html">Classic</option>
+                    <option value="template2.html">Modern</option>
+                </select>
+            </label><br>
+
+            <!-- Hidden input to pass selected template with both buttons -->
+            <input type="hidden" id="templateInput" name="template" value="template1.html">
+
+            <button type="submit" formaction="{{ url_for('smart-resume.preview') }}" class="btn">Preview Resume</button>
+            <button type="submit" formaction="{{ url_for('smart-resume.save') }}" class="btn">Save Resume</button>
+            
+        </form>
+
+        <h3>Live Preview</h3>
+        <div class="preview-box">
+            <h2 id="name_preview"></h2>
+            <p id="email_preview"></p>
+            <p id="phone_preview"></p>
+            <p><strong>Skills:</strong> <span id="skills_preview"></span></p>
+            <p><strong>Experience:</strong> <span id="experience_preview"></span></p>
+            <p><strong>Education:</strong> <span id="education_preview"></span></p>
+            <p><strong>Certifications:</strong> <span id="certifications_preview"></span></p>
+            <p><strong>Projects:</strong> <span id="projects_preview"></span></p>
+            <p><strong>Achievements:</strong> <span id="achievements_preview"></span></p>
+
+        </div>
+    </div>
+</body>
+</html>

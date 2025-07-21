@@ -1,0 +1,219 @@
+/* Root Theme Variables */
+:root {
+    --primary-color: #818cf8;       /* Lighter Indigo */
+    --accent-color: #f472b6;        /* Soft Pink */
+    --bg-color: #1f2937;            /* Dark background */
+    --text-color: #f3f4f6;          /* Light text */
+    --light-text: #e5e7eb;
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: #111827;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+select, button {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-color);
+    font-size: 16px;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+button:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Roadmap Phases */
+.roadmap {
+    margin-top: 30px;
+}
+
+.phase {
+    background: #374151;
+    border-left: 6px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 30px 0;
+    box-shadow: var(--shadow);
+    animation: fadeInUp 0.5s forwards;
+    transform: translateY(20px);
+    opacity: 0;
+    color: var(--text-color);
+}
+
+.phase h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    color: var(--accent-color);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* Link Styling */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #4b5563;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Arrows */
+.phase::after {
+    content: "↓";
+    font-size: 30px;
+    color: var(--accent-color);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.phase:last-child::after {
+    display: none;
+}
+
+/* Collapsible Section */
+.collapsible {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background var(--transition-speed);
+}
+
+.collapsible:after {
+    content: '\002B';
+    float: right;
+}
+
+.collapsible.active:after {
+    content: '\2212';
+}
+
+.content {
+    padding: 15px 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #1f2937;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* Copy Alert */
+.copy-alert {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    z-index: 1000;
+    animation: fadeInOut 2s forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .phase {
+        width: 100%;
+        padding: 15px;
+    }
+}

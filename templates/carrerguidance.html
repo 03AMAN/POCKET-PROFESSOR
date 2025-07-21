@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Guidance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AI-Powered Career Guidance</h2>
+        <form id="careerForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="text" id="education" placeholder="Enter your education level" required>
+            <input type="text" id="skills" placeholder="Enter your skills (comma separated)" required>
+            <select id="interest" required>
+                <option value="">Select your interest</option>
+                <option value="Software Development">Software Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+            <button type="submit">Get Career Advice</button>
+        </form>
+        <div class="result" id="careerResult"></div>
+    </div>
+    
+    <script>
+        document.getElementById('careerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let education = document.getElementById('education').value;
+            let skills = document.getElementById('skills').value;
+            let interest = document.getElementById('interest').value;
+            
+            fetch('/get_career_advice', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, education, skills, interest })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('careerResult').innerHTML = "<strong>" + data.message + "</strong>";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Resume Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input, textarea, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: block;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AI-Powered Smart Resume Builder</h2>
+        <form id="resumeForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="email" placeholder="Email Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="jobRole" placeholder="Job Role" required>
+            <textarea id="experience" placeholder="Work Experience (if any)"></textarea>
+            <textarea id="education" placeholder="Education Details" required></textarea>
+            <textarea id="skills" placeholder="Skills (comma-separated)" required></textarea>
+            <textarea id="achievements" placeholder="Achievements & Certifications"></textarea>
+            <button type="submit">Generate Resume</button>
+        </form>
+        <div class="result" id="resumeResult"></div>
+    </div>
+    
+    <script>
+        document.getElementById('resumeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                jobRole: document.getElementById('jobRole').value,
+                experience: document.getElementById('experience').value,
+                education: document.getElementById('education').value,
+                skills: document.getElementById('skills').value,
+                achievements: document.getElementById('achievements').value
+            };
+            
+            fetch('/generate_resume', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('resumeResult').innerHTML = "<strong>" + data.message + "</strong>";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgb(0, 187, 244);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.resume-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-card {
+    background: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.resume-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.resume-name {
+    font-weight: 600;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.download-links {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn.pdf {
+    background-color: #e74c3c;
+}
+
+.btn.pdf:hover {
+    background-color: #c0392b;
+}
+
+.btn.word {
+    background-color: #00ff11;
+}
+
+.btn.word:hover {
+    background-color: #4cfb01;
+}
+
+.no-resumes {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+.btn.delete {
+    background-color: #e67e22;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.delete:hover {
+    background-color: #d35400;
+}

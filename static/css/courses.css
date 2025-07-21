@@ -1,0 +1,178 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #0a0a0a, #1b1b1b, #121212);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #1a1a1a, #0f0f0f);
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    border-radius: 20px;
+    margin: 20px;
+    backdrop-filter: blur(5px); /* Blurred background for a sleek AI look */
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    animation: slideInFromLeft 1s ease-out;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    animation: slideInFromRight 1.5s ease-out;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skill Cards */
+.skill-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    border: none;
+    color: #ffffff;
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    backdrop-filter: blur(10px); /* Added blur for a futuristic effect */
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05); /* Scale and lift effect */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); /* Enhanced glowing shadow */
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Course Cards */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.course {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 20px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+}
+
+.course h2 {
+    color: #64ffda;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+}
+
+.course p {
+    color: #b0bec5;
+}
+
+.course a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #1de9b6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.course a:hover {
+    color: #00e5ff;
+    text-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}

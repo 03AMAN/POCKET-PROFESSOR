@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career & Learning Assistant</title>
+    <link rel="stylesheet" href="static/css/intro.css">
+</head>
+<body>
+    <div class="animated-background">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <header>
+        <div class="logo">Pocket Professor</div>
+        <nav class="taskbar">
+            <ul>
+                <li><a href="{{ url_for('intro') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('signup') }}">Signup</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="menu">≡</div>
+    </header>
+
+    <section class="intro-section">
+        <h1>Accelerate Your Career Growth</h1>
+        <p>Your personalized AI-powered career and learning assistant</p>
+        <a href="{{ url_for('login') }}" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="feature-cards" id="features">
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Resume Screening">
+            <h3>AI-Powered Resume Screening</h3>
+            <p>Get your resume analyzed and optimized using advanced AI algorithms.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Interview Chatbot">
+            <h3>AI-Powered Interview Chatbot</h3>
+            <p>Practice mock interviews with real-time feedback.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Career Guidance">
+            <h3>AI-Based Career Guidance</h3>
+            <p>Receive personalized advice based on your skills.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Resume Builder">
+            <h3>AI-Powered Resume Builder</h3>
+            <p>Create professional resumes tailored to job roles.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png"alt="Learning Roadmap">
+            <h3>AI-Based Learning Roadmap</h3>
+            <p>Track your progress with personalized recommendations.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png"alt="LinkedIn Growth">
+            <h3>AI-Powered LinkedIn Growth</h3>
+            <p>Grow your network with AI-driven strategies.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Course Finder">
+            <h3>AI-Powered Course Finder</h3>
+            <p>Find the best courses for your goals.</p>
+        </div>
+        <div class="card">
+            <div class="card-background"></div>
+            <img src="static/photos/RS.png" alt="Internship Finder">
+            <h3>AI-Powered Internship Finder</h3>
+            <p>Discover internships and scholarships tailored to you.</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>Why Choose Our Platform?</h2>
+        <p>We provide a comprehensive suite of AI-driven tools designed to enhance your career and learning journey. With personalized guidance, real-time feedback, and curated resources, we empower you to reach your professional goals faster.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AI Career & Learning Assistant | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = Array.from({ length: 60 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 3 + 1,
+            speedX: Math.random() * 2 - 1,
+            speedY: Math.random() * 2 - 1,
+        }));
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.x += p.speedX;
+                p.y += p.speedY;
+                if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffffaa';
+                ctx.fill();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        animateParticles();
+    </script>
+</body>
+</html>

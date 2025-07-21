@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnPath Lite</title>
+    <link rel="stylesheet" href="/static/css/learning.css">
+</head>
+<body>
+    <div class="container">
+        <h1>"Your Personalized Learning Roadmap: Track, Learn, and Achieve!"</h1>
+        <p><strong>This project creates a dynamic and interactive learning roadmap tailored to users' skills and learning goals. By selecting a skill and duration, users receive a structured roadmap with phases (Beginner, Intermediate, Advanced), each containing topics and resources. The roadmap allows users to track their progress by checking off completed topics, with progress visually represented in a real-time progress bar. It also offers the ability to export the roadmap as a markdown file for easy reference. The project integrates features like dark mode, goal setting, and collapsible sections for an enhanced user experience.</p>
+        <div class="form">
+            <select id="skill">
+                <option value="Web Development">Web Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+            </select>
+            <select id="duration">
+                <option value="3 Months">3 Months</option>
+                <option value="6 Months">6 Months</option>
+            </select>
+            <button onclick="generateRoadmap()">Generate Roadmap</button>
+            <button onclick="exportMarkdown()">Copy as Markdown</button>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <!-- Dynamically filled roadmap -->
+        <div id="roadmap" class="roadmap">
+            <!-- This will be populated by JavaScript -->
+        </div>
+    </div>
+
+
+    <!-- Goal Setting -->
+    <div class="goal-setting">
+        <h3>Set Your Goal</h3>
+        <input type="text" id="goal" placeholder="Enter your learning goal">
+        <button onclick="saveGoal()">Save Goal</button>
+    </div>
+
+    <!-- Progress Bar (Consolidated) -->
+    <div class="progress-container">
+        <div id="progress-bar" class="progress-bar">
+            <span id="progress-text">0%</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/learning.js"></script>
+</body>
+</html>

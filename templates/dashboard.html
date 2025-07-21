@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AI Career Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Shooting Stars Background -->
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Pocket Professor</div>
+        <div class="nav-items">
+            <span id="">Welcome, {{ username }}!</span>
+            <img id="profile-picture" src="{{ url_for('static', filename='images/default-profile.png') }}" alt="Profile">
+            <a href="{{ url_for('logout') }}"><button class="logout-btn">Logout</button></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome, {{ username }}!</h1>
+        <p>Boost your career with AI-powered tools.</p>
+    </section>
+
+    <!-- Feature Grid -->
+    <section class="features">
+        <!-- AI Resume Screening -->
+        <a href="{{ url_for('ai_resume_screening.matcher') }}" class="feature-link">
+            <div class="feature-card animated">
+                <i class="fas fa-file-alt"></i>
+                <h3>Smart Match Recruiter</h3>
+                <p>Optimize your resume with AI-powered analysis.</p>
+                <div class="feature-details">
+                    <p><strong>What it does:</strong> Scans and reviews your resume to suggest improvements and optimize it for ATS (Applicant Tracking Systems).</p>
+                    <p><strong>How it helps:</strong> Increases your chances of getting noticed by recruiters and landing interviews.</p>
+                </div>
+            </div>
+        </a>
+
+      
+       
+        <!-- Smart Resume Builder (New Feature) -->
+        <a href="{{ url_for('smart-resume.index') }}" class="feature-link">
+
+            <div class="feature-card animated">
+                <i class="fas fa-pen"></i>
+                <h3>Smart Resume Builder</h3>
+                <p>Build a professional resume effortlessly.</p>
+                <div class="feature-details">
+                    <p><strong>What it does:</strong> Provides easy-to-use templates and AI-driven suggestions to create a tailored resume.</p>
+                    <p><strong>How it helps:</strong> Saves time and ensures that your resume is tailored to specific job roles and industries.</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- Learning Roadmap -->
+        <a href="{{ url_for('learning.generate_roadmap') }}" class="feature-link">
+            <div class="feature-card animated">
+                <i class="fas fa-book"></i>
+                <h3>Learning Roadmap</h3>
+                <p>Personalized learning paths for your career.</p>
+                <div class="feature-details">
+                    <p><strong>What it does:</strong> Generates a customized roadmap with recommended learning resources to upskill in your desired domain.</p>
+                    <p><strong>How it helps:</strong> Helps you stay focused on your learning journey by providing step-by-step guidance.</p>
+                </div>
+            </div>
+        </a>
+
+
+       <!-- Online Courses -->
+    <a href="{{ url_for('courses.courses') }}" class="feature-link">
+     <div class="feature-card animated">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Online Courses</h3>
+        <p>Find top-rated courses based on your skills.</p>
+        <div class="feature-details">
+            <p><strong>What it does:</strong> Recommends the best online courses, bootcamps, and tutorials to accelerate your career development.</p>
+            <p><strong>How it helps:</strong> Provides curated options for learning new technologies, tools, and frameworks to keep you competitive in your field.</p>
+        </div>
+     </div>
+    </a>
+
+      
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

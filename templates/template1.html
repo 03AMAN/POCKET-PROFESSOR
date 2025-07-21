@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/temp1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name">{{ data.name }}</h1>
+            <p class="contact-line">
+                <strong>Email:</strong> {{ data.email }} | <strong>Phone:</strong> {{ data.phone }}
+            </p>
+        </header>
+
+        <div class="main-content">
+            <section class="contact">
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> {{ data.email }}</p>
+                <p><strong>Phone:</strong> {{ data.phone }}</p>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <p>{{ data.skills }}</p>
+            </section>
+        </div>
+
+        <div class="main-content">
+            <section class="experience">
+                <h2>Experience</h2>
+                <p>{{ data.experience }}</p>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <p>{{ data.education }}</p>
+            </section>
+        </div>
+
+        <div class="main-content">
+            <section class="certifications">
+                <h2>Certifications</h2>
+                <p>{{ data.certifications }}</p>
+            </section>
+            
+            <section class="projects">
+                <h2>Projects</h2>
+                <p>{{ data.projects }}</p>
+            </section>
+        </div>
+
+        <section class="achievements">
+            <h2>Achievements</h2>
+            <p>{{ data.achievements }}</p>
+        </section>
+    </div>
+</body>
+</html>

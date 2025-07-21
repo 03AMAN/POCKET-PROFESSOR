@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #008cff, #0077ff);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.resume-container {
+    background: #ffffff;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    color: #067df5;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #0095ff;
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-size: 0.95rem;
+    color: #0059fe;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    color: #006aff;
+    border-bottom: 2px solid #85c1e9;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #0a67f3;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+}
